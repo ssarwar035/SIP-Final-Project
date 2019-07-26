@@ -10,14 +10,29 @@
 </style>
 
 <head>
+  <meta name="viewport" content="initial-scale=1.0">
    <meta charset="UTF-8>"
    <meta name="veiwport" content="width=device=width, intial-scale=1"/>
    <title>Clean Bean</title>
        <link rel="stylesheet" type="text/css" href="style.css">
        <link href="https://fonts.googleapis.com/css?family=Advent+Pro|Raleway&display=swap" rel="stylesheet">
        <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
+       <style>
+     /* Always set the map height explicitly to define the size of the div
+      * element that contains the map. */
+     #map {
+       height: 100%;
+     }
+     /* Optional: Makes the sample page fill the window. */
+     html, body {
+       height: 100%;
+       margin: 0;
+       padding: 0;
+     }
+   </style>
 </head>
 
+<body>
 <div class="topnav">
    <a class="active" href="index.html">Home</a>
    <a href="tools.html">TOOLS</a>
@@ -26,3 +41,20 @@
    <a href="contact.html">CONTACT</a>
 </div>
 <h1><p style= "font-size: 75px; color: white; font-family: 'Raleway', sans-serif; text-align: center">Tools</p></h1>
+
+    <div id="map"></div>
+    <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 8
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMKUhq1j9jggF4kw_qmsrVaPjV-GvYYIU&callback=initMap"
+    async defer></script>
+  </body>
+
+</html>
+
