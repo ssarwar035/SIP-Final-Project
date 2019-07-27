@@ -2,6 +2,8 @@
     background-color: black;
     overflow: auto;
     float: none;
+    text-align: center;
+
 
 
   }
@@ -16,14 +18,18 @@
     font-size: 17px;
     width: 23%;
   } */
+.topnav li{
+      display:inline;
+  }
 
 .topnav a {
      display: block;
-     width: 225px;
+     width: 254px;
      font-weight: bold;
      color: white;
      background-color:  black;
      text-align: center;
+     display: inline-block;
      padding: 10px;
      text-decoration: none;
      text-transform: uppercase;
@@ -31,6 +37,7 @@
      font-family:  'Raleway', sans-serif;
 
  }
+
 
   /* Change the color of links on hover */
  .topnav a:hover {
@@ -115,6 +122,17 @@ color: white;
 .fa-instagram {
 background: #125688;
 color: white;
+}
+
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #404444;
+   color: white;
+   text-align: center;
+   font-family:  'Advent Pro', sans-serif;
 }
 
 /* img{
