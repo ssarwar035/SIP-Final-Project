@@ -141,5 +141,51 @@
 // });
 
 function myFunction(){
-	d3.select("#calc").text("You have clicked on the submit button.")
+	var formInput = d3.select("#forminput");
+	var formValue = formInput.property("value");
+	console.log(formValue);
+	var emission = (formValue*52/.22);
+	d3.select("#calc").text(`The total carbon foot print for ${formValue} is${emission}`);
 }
+
+
+function myNewFunction(){
+
+	var formInput1 = d3.select("#forminput1");
+	var formValue1 = formInput1.property("value");
+
+	origin = formValue1;
+
+	var geocode= "https://maps.googleapis.com/maps/api/geocode/json?address=origin&key=AIzaSyCMKUhq1j9jggF4kw_qmsrVaPjV-GvYYIU"
+
+	d3.json(geocode).then(function(data) {
+	console.log(data["results"][0]["geometry"]["location"]["lat"]);
+	var latitude = data["results"][0]["geometry"]["location"]["lat"];
+	var longitude = data["results"][0]["geometry"]["location"]["lng"]
+	console.log(data["results"][0]["geometry"]["location"]["lng"]);
+	});
+}
+	
+function distanceFunction(){
+	var formInput1 = d3.select("#forminput1");
+	var formValue1 = formInput1.property("value");
+	origins = formValue1;
+	console.log(origins);
+
+	var formInput2 = d3.select("#forminput2");
+	var formValue2 = formInput2.property("value");
+	destinations = formValue2;
+	console.log(destinations);
+
+	var distance= "https://www.distance24.org/route.json?stops=Dallas|Austin"
+	
+	d3.json(distance).then(function(data) {
+		console.log(data);
+		var Distance = data["distances"];
+		console.log(Distance);
+		});
+}
+
+
+
+

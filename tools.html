@@ -54,19 +54,28 @@ Destination: <input type="text" name="destination" value="Boston, USA"><br>
 <input type="submit" value="Submit">
 </form> -->
 
+
 <form>
-Distance from orgin to destination in miles <input type="integer" name="distance" value="1"><br>
+  Origin: <input id="forminput1" type="text" name="origin" value="Austin, TX"><br>
+  Destination: <input id="forminput2" type="text" name="destination" value="Dallas, TX"><br>
+  <!-- <input type="submit" value="Submit"> -->
+  
+  <button type="button" onclick="myNewFunction(); distanceFunction();">Submit</button>
+  <div id="map">
+  </div>
+<br>
+Distance from orgin to destination in miles <input id="forminput" type="integer" name="distance" value="1"><br>
 <!-- <input type="submit" value="Submit"> -->
-</form>
+
 <button type="button" onclick="myFunction()">Submit</button>
 <div id="calc">
 </div>
-
+</form>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script src="js/script.js" type="text/javascript"></script>
+<script src="script.js" type="text/javascript"></script>
 <!-- <h1><p style= "font-size: 75px; color: white; font-family: 'Raleway', sans-serif; text-align: center">Under Construction</p></h1> -->
 
     <!-- <div id="map"></div>
