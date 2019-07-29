@@ -23,19 +23,18 @@
   }
 
 .topnav a {
-     display: block;
-     width: 254px;
-     font-weight: bold;
-     color: white;
-     background-color:  black;
-     text-align: center;
-     display: inline-block;
-     padding: 10px;
-     text-decoration: none;
-     text-transform: uppercase;
-     float: left;
-     font-family:  'Raleway', sans-serif;
-
+    float: left;
+    display: block;
+    width: 254px;
+    font-weight: bold;
+    color: white;
+    background-color:  black;
+    text-align: center;
+    display: inline-block;
+    padding: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family:  'Raleway', sans-serif;
  }
 
 
