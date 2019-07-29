@@ -14,6 +14,7 @@
    <meta charset="UTF-8>"
    <meta name="veiwport" content="width=device=width, intial-scale=1"/>
    <title>Clean Bean</title>
+
        <link rel="stylesheet" type="text/css" href="style.css">
        <link href="https://fonts.googleapis.com/css?family=Advent+Pro|Raleway&display=swap" rel="stylesheet">
        <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
@@ -33,14 +34,24 @@
 </head>
 
 <body>
-<div class="topnav">
-   <a class="active" href="index.html">Home</a>
-   <a href="tools.html">TOOLS</a>
-   <a href="takeaction.html">TAKE ACTION</a>
-   <a href="about.html">ABOUT</a>
-   <a href="contact.html">CONTACT</a>
-</div>
+  <div class="topnav">
+    <ul>
+      <li><a class="active" href="index.html">HOME</a></li>
+      <li><a href="tools.html">TOOLS</a></li>
+      <li><a href="takeaction.html">TAKE ACTION</a></li>
+      <li><a href="about.html">ABOUT</a></li>
+      <li><a href="contact.html">CONTACT</a></li>
+    </ul>
+  </div>
 <h1><p style= "font-size: 75px; color: white; font-family: 'Raleway', sans-serif; text-align: center">Tools</p></h1>
+<form action="tools.html" method="post" style="font-size: 30px; color: white; font-family: 'Raleway', sans-serif;">
+Origin: <input type="text" name="origin" value="New York, USA"><br>
+Destination: <input type="text" name="destination" value="Boston, USA"><br>
+<input type="submit" value="Submit">
+</form>
+
+
+<!-- <h1><p style= "font-size: 75px; color: white; font-family: 'Raleway', sans-serif; text-align: center">Under Construction</p></h1> -->
 
     <div id="map"></div>
     <script>
@@ -54,6 +65,9 @@
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMKUhq1j9jggF4kw_qmsrVaPjV-GvYYIU&callback=initMap"
     async defer></script>
+<!-- <a mimetype="application/json""> -->
+<!-- <a href="https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=40.6655101,-73.89188969999998&destinations=enc:_kjwFjtsbMt%60EgnKcqLcaOzkGari%40naPxhVg%7CJjjb%40cqLcaOzkGari%40naPxhV:&key=AIzaSyCMKUhq1j9jggF4kw_qmsrVaPjV-GvYYIU">Test</a>
+    https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=New+York,USA&destinations=Boston,USA&key=AIzaSyCMKUhq1j9jggF4kw_qmsrVaPjV-GvYYIU
+<!-- </a> -->
   </body>
-
 </html>
