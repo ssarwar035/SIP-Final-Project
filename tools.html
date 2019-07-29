@@ -18,6 +18,9 @@
        <link rel="stylesheet" type="text/css" href="style.css">
        <link href="https://fonts.googleapis.com/css?family=Advent+Pro|Raleway&display=swap" rel="stylesheet">
        <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+     	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+       <script src="https://d3js.org/d3.v5.min.js"></script>
        <style>
      /* Always set the map height explicitly to define the size of the div
       * element that contains the map. */
@@ -44,16 +47,29 @@
     </ul>
   </div>
 <h1><p style= "font-size: 75px; color: white; font-family: 'Raleway', sans-serif; text-align: center">Tools</p></h1>
-<form action="tools.html" method="post" style="font-size: 30px; color: white; font-family: 'Raleway', sans-serif;">
+
+<!-- <form action="tools.html" method="post" style="font-size: 30px; color: white; font-family: 'Raleway', sans-serif;">
 Origin: <input type="text" name="origin" value="New York, USA"><br>
 Destination: <input type="text" name="destination" value="Boston, USA"><br>
 <input type="submit" value="Submit">
+</form> -->
+
+<form>
+Distance from orgin to destination in miles <input type="integer" name="distance" value="1"><br>
+<!-- <input type="submit" value="Submit"> -->
 </form>
+<button type="button" onclick="myFunction()">Submit</button>
+<div id="calc">
+</div>
 
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="js/script.js" type="text/javascript"></script>
 <!-- <h1><p style= "font-size: 75px; color: white; font-family: 'Raleway', sans-serif; text-align: center">Under Construction</p></h1> -->
 
-    <div id="map"></div>
+    <!-- <div id="map"></div>
     <script>
       var map;
       function initMap() {
@@ -64,7 +80,7 @@ Destination: <input type="text" name="destination" value="Boston, USA"><br>
       }
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMKUhq1j9jggF4kw_qmsrVaPjV-GvYYIU&callback=initMap"
-    async defer></script>
+    async defer></script> -->
 <!-- <a mimetype="application/json""> -->
 <!-- <a href="https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=40.6655101,-73.89188969999998&destinations=enc:_kjwFjtsbMt%60EgnKcqLcaOzkGari%40naPxhVg%7CJjjb%40cqLcaOzkGari%40naPxhV:&key=AIzaSyCMKUhq1j9jggF4kw_qmsrVaPjV-GvYYIU">Test</a>
     https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=New+York,USA&destinations=Boston,USA&key=AIzaSyCMKUhq1j9jggF4kw_qmsrVaPjV-GvYYIU
